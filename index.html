@@ -1,19 +1,28 @@
 <!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <html>
   <body>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
     <p>First try.</p>
-    <pre>
+    <pre class="code">
         const MaterialApp(
             debugShowCheckedModeBanner: false,
         }
     </pre>
     <ul>
-        <li><a href="">Flutter: Remove debug banner.</a></li>
+        <li><a onclick="loadText('flutter_remove_debug_banner.txt')">Flutter: Remove debug banner.</a></li>
     </ul>
   </body>
 </html>
 <script>
-
+function loadText(file) {
+    $.ajax({
+        url : file,
+        dataType: "text",
+        success : function (data) {
+            $(".code").html(data);
+        }
+    });
+}
 </script>
