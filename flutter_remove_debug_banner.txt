@@ -1,3 +1,5 @@
+<pre>
 const MaterialApp(
     debugShowCheckedModeBanner: false,
 }
+</pre>
